@@ -47,10 +47,11 @@ const Navbar = () => {
             <a href="#about" className="font-medium text-zinc-900 hover:text-primary transition-colors">Quiénes Somos</a>
             <a href="#services" className="font-medium text-zinc-900 hover:text-primary transition-colors">Servicios</a>
             <a href="#impact" className="font-medium text-zinc-900 hover:text-primary transition-colors">Impacto</a>
+            <a href="#instagram" className="font-medium text-zinc-900 hover:text-primary transition-colors">Instagram</a>
             <a href="#contact" className="font-medium text-zinc-900 hover:text-primary transition-colors">Contacto</a>
           </nav>
 
-          <button className="hidden md:block button-primary">
+          <button className="hidden md:block button-primary hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             Solicitar Servicio
           </button>
 
@@ -100,13 +101,20 @@ const Navbar = () => {
               Impacto
             </a>
             <a 
+              href="#instagram" 
+              onClick={toggleMenu}
+              className="block py-3 font-medium text-zinc-900 hover:text-primary transition-colors"
+            >
+              Instagram
+            </a>
+            <a 
               href="#contact" 
               onClick={toggleMenu}
               className="block py-3 font-medium text-zinc-900 hover:text-primary transition-colors"
             >
               Contacto
             </a>
-            <button className="w-full button-primary">
+            <button className="w-full button-primary hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
               Solicitar Servicio
             </button>
           </div>
