@@ -1,6 +1,6 @@
 
 import { useState, useEffect, useRef } from 'react';
-import { Truck, FileShredder, Recycle, Wine } from 'lucide-react';
+import { Truck, FileX, Recycle, Wine } from 'lucide-react';
 
 const ServiceCard = ({ 
   icon: Icon, 
@@ -82,7 +82,7 @@ const Services = () => {
           />
           
           <ServiceCard 
-            icon={FileShredder} 
+            icon={FileX} 
             iconBg="bg-primary-light" 
             title="Destrucción de documentos" 
             description="Servicio confidencial de destrucción segura de documentos, garantizando la privacidad de la información."
