@@ -33,19 +33,18 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <a href="#home" className="flex items-center">
-              <span className="text-3xl font-bold font-display text-zinc-900">ROTONDARO</span>
-              <div className="ml-2 text-accent w-6 h-6">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path 
-                    d="M12,21C7.029,21,3,16.971,3,12S7.029,3,12,3s9,4.029,9,9S16.971,21,12,21z" 
-                    fill="#00E676" 
-                  />
-                  <path 
-                    d="M12.5,8v3.5H16l-4,4.5v-3.5H8.5L12.5,8z" 
-                    fill="white" 
-                    strokeWidth="0.5"
-                    stroke="#007D36"
-                  />
+              <div className="h-10 w-auto">
+                <svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.5,8a4,4 0 1,0 8,0a4,4 0 1,0 -8,0" fill="#00E676"/>
+                  <path d="M0,20 L10,20 L10,30 L0,30 Z" fill="#00E676"/>
+                  <path d="M15,0 L30,0 L30,40 L15,40 Z" fill="#00E676"/>
+                  <path d="M40,5 L55,5 L55,35 L40,35 Z" fill="#00E676"/>
+                  <path d="M65,10 L75,10 L75,30 L65,30 Z" fill="#00E676"/>
+                  <path d="M85,0 L100,0 L100,40 L85,40 Z" fill="#00E676"/>
+                  <path d="M110,10 L120,10 L120,30 L110,30 Z" fill="#00E676"/>
+                  <path d="M130,5 L145,5 L145,35 L130,35 Z" fill="#00E676"/>
+                  <path d="M155,0 L170,0 L170,40 L155,40 Z" fill="#00E676"/>
+                  <path d="M12.5,8v3.5H16l-4,4.5v-3.5H8.5L12.5,8z" fill="white" strokeWidth="0.5" stroke="#007D36"/>
                 </svg>
               </div>
             </a>
