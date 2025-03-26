@@ -31,7 +31,7 @@ const Hero = () => {
             </a>
           </div>
           
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-float">
+          <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-float">
             <a href="#about" className="text-primary hover:text-primary-dark transition-colors">
               <ArrowDownCircle size={36} />
             </a>
