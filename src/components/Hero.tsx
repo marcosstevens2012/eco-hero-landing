@@ -54,12 +54,31 @@ const Hero = () => {
             ES AVANZAR
           </h1>
           <p 
-            className={`subheading mb-10 transition-all duration-1000 delay-300 ${
+            className={`subheading mb-6 transition-all duration-1000 delay-300 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
             }`}
           >
             En Rotondaro nos dedicamos a la gestión integral de residuos, ofreciendo soluciones sostenibles para empresas comprometidas con el medio ambiente.
           </p>
+          
+          <div 
+            className={`bg-white/80 backdrop-blur-sm p-4 rounded-xl shadow-sm border border-primary/10 mb-10 transition-all duration-1000 delay-400 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'
+            }`}
+          >
+            <p className="text-zinc-800 font-medium">
+              <span className="text-primary font-semibold">📍 Zum Felde 2274:</span> Compramos papel, cartón y PET en desuso - 
+              <span className="whitespace-nowrap">🤳 098 595 111</span>
+            </p>
+            <p className="text-zinc-800 font-medium mt-2">
+              <span className="text-primary font-semibold">📍 Zum Felde 2301:</span> Vendemos envases de vidrio - 
+              <span className="whitespace-nowrap">🤳 096 407 200</span>
+            </p>
+            <p className="text-zinc-700 text-sm mt-2">
+              <span className="text-primary">⏰</span> Horario: 8:00 a 11:30 y 13:00 a 17:00 hs
+            </p>
+          </div>
+          
           <div 
             className={`flex flex-col sm:flex-row gap-4 justify-center mb-12 transition-all duration-1000 delay-500 ${
               isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-95'

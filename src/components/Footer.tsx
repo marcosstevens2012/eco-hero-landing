@@ -30,9 +30,13 @@ const Footer = () => {
               Empresa uruguaya especializada en gestión de residuos y reciclaje, comprometida con el medio ambiente y la economía circular.
             </p>
             <div className="text-sm text-zinc-400">
-              <p>Alberto Zum Felde 2274</p>
-              <p>2301. CP 11400. Montevideo</p>
-              <p>Uruguay</p>
+              <p className="mb-1"><strong>Materiales (papel, cartón, PET):</strong></p>
+              <p>Zum Felde 2274 - CP 11400, Montevideo</p>
+              <p>WhatsApp: 098 595 111</p>
+              
+              <p className="mt-3 mb-1"><strong>Envases de vidrio:</strong></p>
+              <p>Zum Felde 2301 - CP 11400, Montevideo</p>
+              <p>WhatsApp: 096 407 200</p>
             </div>
           </div>
           
@@ -78,7 +82,19 @@ const Footer = () => {
               <li>
                 <a href="#services" className="text-zinc-400 hover:text-white transition-colors flex items-center">
                   <ChevronRight size={16} className="mr-1" />
-                  Recolección de papel y cartón
+                  Compra de papel y cartón
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-zinc-400 hover:text-white transition-colors flex items-center">
+                  <ChevronRight size={16} className="mr-1" />
+                  Compra de PET en desuso
+                </a>
+              </li>
+              <li>
+                <a href="#services" className="text-zinc-400 hover:text-white transition-colors flex items-center">
+                  <ChevronRight size={16} className="mr-1" />
+                  Venta de envases de vidrio
                 </a>
               </li>
               <li>
@@ -91,12 +107,6 @@ const Footer = () => {
                 <a href="#services" className="text-zinc-400 hover:text-white transition-colors flex items-center">
                   <ChevronRight size={16} className="mr-1" />
                   Gestión de residuos comerciales
-                </a>
-              </li>
-              <li>
-                <a href="#services" className="text-zinc-400 hover:text-white transition-colors flex items-center">
-                  <ChevronRight size={16} className="mr-1" />
-                  Venta de envases de vidrio
                 </a>
               </li>
             </ul>
@@ -121,13 +131,23 @@ const Footer = () => {
                 <span>reciclo@rotondaro.com.uy</span>
               </li>
               <li className="flex items-start">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 mt-0.5 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <div>
+                  <p>Lunes a viernes:</p>
+                  <p>8:00 - 11:30 y 13:00 - 17:00</p>
+                </div>
+              </li>
+              <li className="flex items-start">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-3 mt-0.5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                   <circle cx="12" cy="10" r="3"></circle>
                 </svg>
                 <div>
-                  <p>Alberto Zum Felde 2274</p>
-                  <p>2301. CP 11400. Montevideo</p>
+                  <p>Materiales: Zum Felde 2274</p>
+                  <p>Envases: Zum Felde 2301</p>
+                  <p>CP 11400. Montevideo</p>
                 </div>
               </li>
             </ul>
@@ -145,6 +165,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-white transition-colors"
+                aria-label="Instagram"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -158,6 +179,7 @@ const Footer = () => {
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-zinc-500 hover:text-white transition-colors"
+                aria-label="Facebook"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />

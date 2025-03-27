@@ -1,14 +1,32 @@
+
+# Allow all web crawlers (notice the wildcard) 
+User-agent: *
+Allow: /
+
+# Specific search engine bots
 User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
-User-agent: Twitterbot
+User-agent: Yandexbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
 Allow: /
 
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: Twitterbot
 Allow: /
+
+# Sitemap (once you have one)
+# Sitemap: https://rotondaro.com.uy/sitemap.xml
