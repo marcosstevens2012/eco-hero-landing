@@ -20,27 +20,34 @@ const ContactForm = () => {
     });
   };
 
-  // Manejar el envío del formulario
-  const handleSubmit = async (data: FormValues) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      // Aquí realizarías la llamada a tu API para enviar el formulario
-      // Por ejemplo:
-      // const response = await fetch('https://api.tusitio.com/contact', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(data),
-      // });
+      const formDataEncoded = new URLSearchParams({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        message: formData.message,
+      });
 
-      // Simulamos una llamada a API con una promesa y un timeout
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      const response = await fetch("https://mail.rotondaro.com.uy/send-email.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formDataEncoded.toString(),
+      });
 
-      // Si todo va bien, mostrar un mensaje de éxito
-      toast.success("Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.");
-      form.reset();
+      const result = await response.json();
+
+      if (result.status === "success") {
+        toast.success("Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.");
+        setFormData({ name: "", email: "", phone: "", company: "", message: "" });
+      } else {
+        throw new Error(result.message || "Error al enviar el mensaje");
+      }
     } catch (error) {
-      // En caso de error, mostrar un mensaje de error
       toast.error("Ha ocurrido un error al enviar el mensaje. Por favor intenta nuevamente.");
       console.error("Error al enviar formulario:", error);
     } finally {
