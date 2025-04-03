@@ -33,15 +33,21 @@ const ContactForm = () => {
         message: formData.message,
       });
 
-      const response = await fetch("https://mail.rotondaro.com.uy/send-email.php", {
+      const response = await fetch("http://mail.rotondaro.com.uy/send-email.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formDataEncoded.toString(),
       });
 
       const result = await response.json();
+      console.log("Response from server:", result);
+      if (!response.ok) {
+        throw new Error(result.message || "Error al enviar el mensaje");
+        return;
+      }
 
       if (result.status === "success") {
+        console.log("Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.");
         toast.success("Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.");
         setFormData({ name: "", email: "", phone: "", company: "", message: "" });
       } else {
