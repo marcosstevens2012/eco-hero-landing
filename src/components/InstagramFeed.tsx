@@ -13,27 +13,6 @@ const InstagramFeed = () => {
   // En un entorno real, estos datos vendrían de la API de Instagram
   const [posts, setPosts] = useState<InstagramPost[]>([
     {
-      id: "1",
-      imageUrl: "/lovable-uploads/54d0c584-670d-4ae1-bcb6-a9f7136ed072.png",
-      caption: "Trabajando con empresas comprometidas con el medio ambiente. #ReciclajeResponsable #Rotondaro",
-      likes: 87,
-      link: "https://instagram.com/rotondaro_recicla",
-    },
-    {
-      id: "3",
-      imageUrl: "/lovable-uploads/66cac6e2-1852-49ff-986d-d2ddc815ae97.png",
-      caption: "¿Sabías que reciclar una tonelada de papel salva 17 árboles? #DatosCuriosos #MedioAmbiente",
-      likes: 112,
-      link: "https://instagram.com/rotondaro_recicla",
-    },
-    {
-      id: "4",
-      imageUrl: "/lovable-uploads/roto1.jpeg",
-      caption: "¿Sabías que reciclar una tonelada de papel salva 17 árboles? #DatosCuriosos #MedioAmbiente",
-      likes: 112,
-      link: "https://instagram.com/rotondaro_recicla",
-    },
-    {
       id: "5",
       imageUrl: "/lovable-uploads/roto2.jpeg",
       caption: "¿Sabías que reciclar una tonelada de papel salva 17 árboles? #DatosCuriosos #MedioAmbiente",
@@ -50,6 +29,41 @@ const InstagramFeed = () => {
     {
       id: "7",
       imageUrl: "/lovable-uploads/roto4.jpeg",
+      caption: "¿Sabías que reciclar una tonelada de papel salva 17 árboles? #DatosCuriosos #MedioAmbiente",
+      likes: 112,
+      link: "https://instagram.com/rotondaro_recicla",
+    },
+    {
+      id: "8",
+      imageUrl: "/lovable-uploads/roto5.jpeg",
+      caption: "¿Sabías que reciclar una tonelada de papel salva 17 árboles? #DatosCuriosos #MedioAmbiente",
+      likes: 112,
+      link: "https://instagram.com/rotondaro_recicla",
+    },
+    {
+      id: "9",
+      imageUrl: "/lovable-uploads/roto6.jpeg",
+      caption: "¿Sabías que reciclar una tonelada de papel salva 17 árboles? #DatosCuriosos #MedioAmbiente",
+      likes: 112,
+      link: "https://instagram.com/rotondaro_recicla",
+    },
+    {
+      id: "10",
+      imageUrl: "/lovable-uploads/roto7.jpeg",
+      caption: "¿Sabías que reciclar una tonelada de papel salva 17 árboles? #DatosCuriosos #MedioAmbiente",
+      likes: 112,
+      link: "https://instagram.com/rotondaro_recicla",
+    },
+    {
+      id: "11",
+      imageUrl: "/lovable-uploads/roto8.jpeg",
+      caption: "¿Sabías que reciclar una tonelada de papel salva 17 árboles? #DatosCuriosos #MedioAmbiente",
+      likes: 112,
+      link: "https://instagram.com/rotondaro_recicla",
+    },
+    {
+      id: "12",
+      imageUrl: "/lovable-uploads/roto9.jpeg",
       caption: "¿Sabías que reciclar una tonelada de papel salva 17 árboles? #DatosCuriosos #MedioAmbiente",
       likes: 112,
       link: "https://instagram.com/rotondaro_recicla",
@@ -121,7 +135,6 @@ const InstagramFeed = () => {
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
                       </svg>
-                      {post.likes}
                     </span>
                   </div>
                   <p className="text-sm">{post.caption}</p>

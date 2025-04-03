@@ -1,16 +1,15 @@
-
-import { useState } from 'react';
-import { Send } from 'lucide-react';
+import { useState } from "react";
+import { Send } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const ContactForm = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    company: '',
-    message: '',
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -21,27 +20,32 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  // Manejar el envío del formulario
+  const handleSubmit = async (data: FormValues) => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+
+    try {
+      // Aquí realizarías la llamada a tu API para enviar el formulario
+      // Por ejemplo:
+      // const response = await fetch('https://api.tusitio.com/contact', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify(data),
+      // });
+
+      // Simulamos una llamada a API con una promesa y un timeout
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      // Si todo va bien, mostrar un mensaje de éxito
+      toast.success("Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.");
+      form.reset();
+    } catch (error) {
+      // En caso de error, mostrar un mensaje de error
+      toast.error("Ha ocurrido un error al enviar el mensaje. Por favor intenta nuevamente.");
+      console.error("Error al enviar formulario:", error);
+    } finally {
       setIsSubmitting(false);
-      toast({
-        title: "Mensaje enviado",
-        description: "Nos pondremos en contacto contigo a la brevedad",
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        message: '',
-      });
-    }, 1500);
+    }
   };
 
   return (
@@ -62,7 +66,7 @@ const ContactForm = () => {
             placeholder="Ingresa tu nombre"
           />
         </div>
-        
+
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-zinc-700 mb-1">
             Correo electrónico *
@@ -79,7 +83,7 @@ const ContactForm = () => {
           />
         </div>
       </div>
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
           <label htmlFor="phone" className="block text-sm font-medium text-zinc-700 mb-1">
@@ -95,7 +99,7 @@ const ContactForm = () => {
             placeholder="098 595 111"
           />
         </div>
-        
+
         <div>
           <label htmlFor="company" className="block text-sm font-medium text-zinc-700 mb-1">
             Empresa
@@ -111,7 +115,7 @@ const ContactForm = () => {
           />
         </div>
       </div>
-      
+
       <div>
         <label htmlFor="message" className="block text-sm font-medium text-zinc-700 mb-1">
           Mensaje *
@@ -124,15 +128,10 @@ const ContactForm = () => {
           onChange={handleChange}
           rows={5}
           className="w-full px-4 py-3 rounded-lg border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
-          placeholder="¿En qué podemos ayudarte?"
-        ></textarea>
+          placeholder="¿En qué podemos ayudarte?"></textarea>
       </div>
-      
-      <button
-        type="submit"
-        disabled={isSubmitting}
-        className="button-primary w-full flex items-center justify-center"
-      >
+
+      <button type="submit" disabled={isSubmitting} className="button-primary w-full flex items-center justify-center">
         {isSubmitting ? (
           <span className="flex items-center">
             <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
