@@ -33,7 +33,7 @@ const ContactForm = () => {
         message: formData.message,
       });
 
-      const response = await fetch("http://mail.rotondaro.com.uy/send-email.php", {
+      const response = await fetch("https://mail.rotondaro.com.uy/send-email.php", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formDataEncoded.toString(),
