@@ -48,14 +48,25 @@ const ContactForm = () => {
 
       if (result.status === "success") {
         console.log("Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.");
-        toast.success("Mensaje enviado correctamente. Nos pondremos en contacto contigo pronto.");
+        toast({
+          title: "Mensaje enviado",
+          description: "Nos pondremos en contacto contigo pronto.",
+          duration: 5000,
+          variant: "default",
+        });
         setFormData({ name: "", email: "", phone: "", company: "", message: "" });
       } else {
         throw new Error(result.message || "Error al enviar el mensaje");
+        return;
       }
     } catch (error) {
-      toast.error("Ha ocurrido un error al enviar el mensaje. Por favor intenta nuevamente.");
-      console.error("Error al enviar formulario:", error);
+      alert("Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.");
+      toast({
+        title: "Error",
+        description: "Error al enviar el mensaje. Por favor, inténtalo de nuevo más tarde.",
+        duration: 5000,
+        variant: "default",
+      });
     } finally {
       setIsSubmitting(false);
     }
