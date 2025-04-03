@@ -79,7 +79,7 @@ const Services = () => {
             icon={Milk}
             iconBg="bg-secondary-light"
             title="Venta de envases de vidrio"
-            description="Comercializamos vidrio reciclado para empresas que requieren envases sostenibles para sus productos."
+            description="Comercializamos una extensa línea de productos desarrollada para presentar y preservar de la manera más exigente el sabor, aroma y color del producto original."
             delay={300}
           />
         </div>
