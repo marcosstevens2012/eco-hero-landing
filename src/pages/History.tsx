@@ -8,8 +8,9 @@ import InstagramFeed from "@/components/InstagramFeed";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Historia from "@/components/Historia";
 
-const Index = () => {
+const Histoy = () => {
   useEffect(() => {
     const handleHashLinkClick = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
@@ -37,16 +38,11 @@ const Index = () => {
   return (
     <div className="min-h-screen overflow-x-hidden">
       <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Impact />
-      <InstagramFeed />
-      <Contact />
+      <Historia />
       <Footer />
       <WhatsAppButton />
     </div>
   );
 };
 
-export default Index;
+export default Histoy;

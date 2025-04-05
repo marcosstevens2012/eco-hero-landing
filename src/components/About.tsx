@@ -57,7 +57,7 @@ const About = () => {
               específicas de cada cliente.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
               <div className="flex items-center">
                 <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
                   <svg viewBox="0 0 24 24" className="w-6 h-6 text-primary" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -83,6 +83,13 @@ const About = () => {
                   <p className="text-sm text-zinc-600">Expertos en gestión de residuos</p>
                 </div>
               </div>
+            </div>
+
+            {/* Button moved outside the grid */}
+            <div className="flex justify-start">
+              <a href="/history" className="button-primary hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                Ver Historia completa
+              </a>
             </div>
           </div>
         </div>
