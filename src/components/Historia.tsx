@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react";
-import { ArrowRightCircle, Clock, BookOpen, Award, Recycle, Leaf, RefreshCw } from "lucide-react";
+import { ArrowRightCircle, Award, BookOpen, Clock, Leaf, Recycle, RefreshCw } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const Historia = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -147,12 +147,11 @@ const Historia = () => {
 
           <div className={`transition-all duration-1000 delay-500 ${isVisible ? "opacity-100 transform translate-x-0" : "opacity-0 transform translate-x-10"}`}>
             <div className="relative rounded-2xl overflow-hidden shadow-2xl group">
-              <img src="/rotondaro-familia.jpg" alt="Familia Rotondaro" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
+              <img src="/familia-rotondaro.jpeg" alt="Familia Rotondaro" className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 ease-out" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent opacity-70 group-hover:opacity-60 transition-opacity duration-300"></div>
               <div className="absolute bottom-8 left-8 right-8 text-white">
                 <span className="inline-block py-1.5 px-4 rounded-full bg-primary text-sm font-medium shadow-md mb-4">Tradición familiar desde 1923</span>
                 <h3 className="text-2xl font-bold mb-2">Un legado de sostenibilidad</h3>
-                <p className="text-white/90 max-w-md">Descubre cómo nuestra familia ha dedicado más de un siglo a construir un futuro más sostenible para Uruguay.</p>
               </div>
             </div>
           </div>
