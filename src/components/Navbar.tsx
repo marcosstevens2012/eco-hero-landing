@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -7,11 +7,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -54,13 +50,13 @@ const Navbar = () => {
             </a>
           </nav>
 
-          <a href="#contact" className="button-primary hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+          <a href="#contact" className="hidden md:inline-block button-primary hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
             Solicitar Servicio
           </a>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button type="button" onClick={toggleMenu} className="text-zinc-800 hover:text-primary focus:outline-none">
+            <button type="button" onClick={toggleMenu} aria-expanded={isMenuOpen} aria-label="Toggle menu" className="text-zinc-800 hover:text-primary focus:outline-none">
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -69,8 +65,8 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {isMenuOpen && (
-        <div className="absolute top-20 left-0 right-0 h-screen bg-white md:hidden glass-effect animate-fade-in">
-          <div className="px-4 pt-2 pb-6 space-y-6">
+        <div className="absolute top-20 left-0 right-0 h-screen bg-white/90 backdrop-blur-md md:hidden animate-slide-in">
+          <div className="px-4 pt-6 pb-8 space-y-6">
             <a href="#home" onClick={toggleMenu} className="block py-3 font-medium text-zinc-900 hover:text-primary transition-colors">
               Inicio
             </a>
